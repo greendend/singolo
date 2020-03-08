@@ -165,8 +165,8 @@ button:disabled {
 
 
 header {
-  padding-top: 14px;
-  padding-bottom: 12px;
+  padding-top: 29px;
+  padding-bottom: 30px;
 
   font-weight: 700;
   text-transform: uppercase;
@@ -193,7 +193,6 @@ nav ul {
 
 nav ul li {
   display: inline-block;
-  padding-top: 14px;
   list-style-type: none;
 }
 
