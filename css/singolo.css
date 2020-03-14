@@ -253,17 +253,18 @@ nav a:not(.current):hover {
 .arrow {
   width: 16px;
   height: 27px;
-  padding: 150px 0;
+  padding: 240px 0;
 
   background: transparent url("../assets/img/arrow.svg") no-repeat center center;
 }
 
 .arrow.left {
-  margin-left: 2px;
+   margin-left: 2px; 
 }
 
 .arrow.right {
   transform: scale(-1,1);
+  margin-left: 55px;
 }
 
 .slider__images {
@@ -680,4 +681,68 @@ footer .social-icons {
   border: 0;
 
   overflow: hidden;
+}
+
+.slideshow-container {
+  display: flex;
+  max-width: 1000px;
+  margin: 0;
+}
+
+.offscreen2 {
+  position: absolute;
+  height: 190px;
+  width: 335px;
+  margin-top: 134px;
+  margin-left: 484px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+.offscreen3 {
+  position: absolute;
+  display: block;
+  width: 202px;
+  margin-left: 416px;
+  margin-top: 68px;
+  height: 356px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+.offscreen1 {
+  position: absolute;
+  height: 334px;
+  width: 189px;
+  margin-top: 65px;
+  margin-left: 85px;
+  border-radius: 4px;
+  background-color: black;
+}
+
+.iphone-button1 {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  margin-top: 407px;
+  margin-left: 140px;
+  border-radius: 50%;
+}
+
+.iphone-button3 {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-top: 433px;
+  margin-left: 436px;
+}
+
+.iphone-button2 {
+  position: absolute;
+  width: 41px;
+  height: 41px;
+  margin-top: 207px;
+  margin-left: 375px;
+  border-radius: 50%;
 }

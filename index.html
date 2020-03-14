@@ -25,17 +25,23 @@
 
   <section class="slider">
     <div class="wrapper">
-      <h2 class="visually-hidden">Image Gallery</h2>
-   
-      <button class="arrow left" type="button" aria-label="Slide previous"></button>
+      <div class="slideshow-container">
+         <div class="offscreen1"style="display: none;"></div> 
+        <div class="offscreen2" style="display: none;"></div>
+        <div class="offscreen3" style="display: none;"></div>
+    
+        <button class="arrow left" type="button" aria-label="Slide previous"></button>
+        
+        <div class="slider__images">
+          <div class="iphone-button1"></div>
+          <div class="iphone-button2"></div>
+          <img src="assets/img/iphone_vertical.png" alt="iPhone Vertical">
+          <img src="assets/img/iphone_horizontal.png" alt="iPhone Horizontal">
+        </div>
 
-      <div class="slider__images">
-        <img width="240" height="483" src="assets/img/vertical.png" alt="iPhone Vertical">
-        <img width="484" height="240" src="assets/img/horizontal.png" alt="iPhone Horizontal">
-      </div>
-
-      <button class="arrow right" type="button" aria-label="Slide next"></button>
+        <button class="arrow right" type="button" aria-label="Slide next"></button>
     </div>
+  </div>
   </section>
 
   <section class="services">
@@ -188,5 +194,6 @@
       </div>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
