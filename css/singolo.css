@@ -237,6 +237,11 @@ nav a:not(.current):hover {
   border-bottom: 6px solid #ea676b;
 }
 
+.slider.blue {
+  background-color: #648bf0;
+  border-bottom: 6px solid #348bf0;
+}
+
 .slider .wrapper {
   display: flex;
   justify-content: space-between;
@@ -694,7 +699,7 @@ footer .social-icons {
   height: 190px;
   width: 335px;
   margin-top: 134px;
-  margin-left: 484px;
+  margin-left: 427px;
   border-radius: 4px;
   background-color: black;
 }
@@ -745,4 +750,13 @@ footer .social-icons {
   margin-top: 207px;
   margin-left: 375px;
   border-radius: 50%;
+}
+
+.bigger {
+  width: 851px;
+  height: 489px;
+}
+
+.iphones {
+  margin-left: 25%;
 }
