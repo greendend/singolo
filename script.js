@@ -6,13 +6,14 @@ const offscreen1 = document.querySelector(".offscreen1");
 const offscreen2 = document.querySelector(".offscreen2");
 const offscreen3 = document.querySelector(".offscreen3");
 
-const ARROW_LEFT = document.querySelector(".arrow.left");
-const ARROW_RIGHT = document.querySelector(".arrow.right");
+const CHEV_LEFT = document.querySelector(".chev_left");
+const CHEV_RIGHT = document.querySelector(".chev_right");
 
 let slider = document.getElementsByClassName("slider");
 
 let screenoff1 = false;
 let screenoff2 = false;
+let screenoff3 = false;
 
 iphone1.addEventListener('click', () => {
     screenoff1 = !screenoff1;
@@ -24,7 +25,12 @@ iphone2.addEventListener('click', () => {
     screenoff2 ? offscreen2.style.display = "block" : offscreen2.style.display = "none";
 });
 
-ARROW_LEFT.addEventListener('click', () => {
+iphone3.addEventListener('click', () => {
+    screenoff3 = !screenoff3;
+    screenoff3 ? offscreen3.style.display = "block" : offscreen3.style.display = "none";
+});
+
+CHEV_LEFT.addEventListener('click', () => {
     plusSlides(-1);
     if (slider[0].classList[1] == "blue") {
         slider[0].classList.remove('blue');
@@ -32,7 +38,7 @@ ARROW_LEFT.addEventListener('click', () => {
     else { slider[0].classList.add('blue'); }
 });
 
-ARROW_RIGHT.addEventListener('click', () => {
+CHEV_RIGHT.addEventListener('click', () => {
     plusSlides(1);
     if (slider[0].classList[1] == "blue") {
         slider[0].classList.remove('blue');
@@ -49,6 +55,9 @@ function plusSlides(n) {
     screenoff3 = false;
     showSlides(slideIndex += n);
 }
+
+var slideIndex = 1;
+showSlides(slideIndex);
 
 function showSlides(n) {
     var i;

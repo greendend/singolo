@@ -91,31 +91,6 @@ footer {
   line-height: 1.84em;
 }
 
-
-
-button {
-  padding: 0;
-  font: inherit;
-  
-  cursor: pointer;
-  
-  color: inherit;
-  background-color: transparent;
-  border: none;
-}
-
-button:not(:disabled):hover,
-button:not(:disabled):focus {
-  filter: saturate(1.25);
-}
-
-button:disabled {
-  opacity: 0.7;
-  cursor: default;
-}
-
-
-
 .social-icons {
   margin-top: 24px;
   padding-left: 1px;
@@ -248,28 +223,35 @@ nav a:not(.current):hover {
   align-items: center;
 }
 
-.slider button,
+.slider .chev_right,
+.slider .chev-left,
 .slider__images,
 .slider__images img {
   display: inline-block;
   vertical-align: middle;
 }
 
-.arrow {
-  width: 16px;
+.chev_left {
   height: 27px;
-  padding: 240px 0;
-
-  background: transparent url("../assets/img/arrow.svg") no-repeat center center;
+  margin-top: 228px;
+  /*margin-bottom: 231px;*/
 }
 
-.arrow.left {
-   margin-left: 2px; 
-}
-
-.arrow.right {
-  transform: scale(-1,1);
+.chev_right {
+  height: 27px;
+  margin-top: 228px;
   margin-left: 55px;
+  /* margin-bottom: 231px;*/
+}
+
+.chev_left:hover {
+  background: url(../assets/img/chev_left_hover.png);
+  cursor: pointer;
+}
+
+.chev_right:hover {
+  background: url(../assets/img/chev_right_hover.png);
+  cursor: pointer;
 }
 
 .slider__images {
@@ -278,13 +260,13 @@ nav a:not(.current):hover {
   width: calc(100% - 16px*2);
 }
 
-.slider__images img {
+.iphone1 {
   vertical-align: middle;
 
   margin-left: 54px;
 }
 
-.slider__images img:nth-child(2) {
+.iphone2 {
   margin-left: 69px;
   margin-bottom: 1px;
 }
@@ -699,7 +681,7 @@ footer .social-icons {
   height: 190px;
   width: 335px;
   margin-top: 134px;
-  margin-left: 427px;
+  margin-left: 441px;
   border-radius: 4px;
   background-color: black;
 }
@@ -707,8 +689,8 @@ footer .social-icons {
 .offscreen3 {
   position: absolute;
   display: block;
-  width: 202px;
-  margin-left: 416px;
+  width: 201px;
+  margin-left: 374px;
   margin-top: 68px;
   height: 356px;
   border-radius: 4px;
@@ -720,7 +702,7 @@ footer .social-icons {
   height: 334px;
   width: 189px;
   margin-top: 65px;
-  margin-left: 85px;
+  margin-left: 84px;
   border-radius: 4px;
   background-color: black;
 }
