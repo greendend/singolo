@@ -8,22 +8,29 @@
     <title>Singolo</title>
 </head>
 <body>
+  <div class="modal hidden">
+    <div class="modal__message">
+      Test
+    </div>
+    <div class="modal__background"></div>
+  </div>
+
   <header>
     <div class="wrapper">
       <h1> Singolo<span>*</span> </h1>
       <nav>
-        <ul>
+        <ul id="menu">
           <li><a class="current">Home</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a>Services</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+          <li><a>Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="slider">
+  <section class="slider home">
     <div class="wrapper">
       <div class="slideshow-container">
          <div class="offscreen1"style="display: none;"></div> 
@@ -94,14 +101,24 @@
 
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-      <div class="portfolio__tags">
-        <button class="tag selected">All</button>
-        <button class="tag">Web Design</button>
-        <button class="tag">Graphic Design</button>
-        <button class="tag">Artwork</button>
-      </div>
+      <nav class="navigation_bar">
+        <ul class="navbar_buttons" id="menu-portfolio">
+            <li>
+                <p class="buttons b1 active">All</p>
+            </li>
+            <li>
+                <p class="buttons b2">Web Design</p>
+            </li>
+            <li>
+                <p class="buttons b3">Graphic Design</p>
+            </li>
+            <li>
+                <p class="buttons b4">Artwork</p>
+            </li>
+        </ul>
+    </nav>
 
-      <div class="layout-4-column">
+      <div class="layout-4-column" id="portfolio-grid">
         <img class="portfolio__picture" src="assets/img/portfolio/1.jpg" alt="Portfolio Picture 1 — Ship illustration">
         <img class="portfolio__picture" src="assets/img//portfolio/2.jpg" alt="Portfolio Picture 2 — Smiling girl with ice-cream illustration">
         <img class="portfolio__picture" src="assets/img/portfolio/3.jpg" alt="Portfolio Picture 3 — City at night illustration">
@@ -118,7 +135,7 @@
     </div>
   </section>
 
-  <section class="about-us">
+  <section class="about-us about">
     <div class="wrapper">
       <h2>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -164,7 +181,7 @@
     </div>
   </section>
 
-  <section class="contacts">
+  <section class="contacts contact">
     <div class="wrapper">
       <h2>Get a Quote</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -174,7 +191,7 @@
           <input type="email" name="email" placeholder="Email (Required)" required>
           <input type="text" name="subject" placeholder="Subject">
           <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
-          <button type="submit" formmethod="POST">Submit</button>
+          <button type="submit" formmethod="POST">Submit</button>          
         </form>
         <div class="contact-form__info">
           <h3>Contact Information</h3>
@@ -198,6 +215,7 @@
       </div>
     </div>
   </footer>
+<!-- message - hiden(default) -->
   <script src="script.js"></script>
 </body>
 </html>
