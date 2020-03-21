@@ -1,18 +1,33 @@
 // anchor
 
 const menu = document.querySelector("nav ul");
+const menuLinks = document.querySelectorAll("nav ul li a");
 
-menu.addEventListener("click", (event) => {
-  menu.querySelectorAll('li a').forEach(e => e.classList.remove('current'));
+menuLinks.forEach( link => link.addEventListener("click", (event) => {
+  menu.querySelectorAll('a').forEach(e => e.classList.remove('current'));
   event.target.classList.add("current");
+}));
 
-  let classForScroll = event.target.innerHTML.toLowerCase()+"";
+document.addEventListener("scroll", changeMenuActiveLink);
+window.onload = changeMenuActiveLink();
 
-  window.scrollTo({
-    top: document.querySelector(`.${classForScroll}`).offsetTop - 89,
-    behavior: 'smooth'
+function changeMenuActiveLink(event) {
+  const currentPositionY = window.scrollY;
+  const tagsWithId = document.querySelectorAll("section");
+
+  tagsWithId.forEach( tag => {
+    if (tag.offsetTop - 89 <= currentPositionY &&
+       (tag.offsetTop + tag.offsetHeight - 89) > currentPositionY) {
+      menuLinks.forEach( link => {
+        link.classList.remove("current");
+        if(tag.getAttribute("id") === link.getAttribute("href").substring(1)) {
+          link.classList.add("current");
+        }
+      });
+    }
   });
-});
+  
+}
 
 
 // slider -----------------------------------------------
