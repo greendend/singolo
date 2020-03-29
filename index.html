@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="./assets/fonts/fonts.css">
     <link rel="stylesheet" href="css/singolo.css">
     <title>Singolo</title>
 </head>
 <body>
   <div class="modal hidden">
     <div class="modal__message">
-      Test
+      No content
     </div>
-    <div class="modal__background"></div>
   </div>
 
   <header>
     <div class="wrapper">
-      <h1> Singolo<span>*</span> </h1>
+      <button class="header__burger" type="button"></button>
+      <h1>Singolo</h1>
       <nav>
-        <ul id="menu">
+        <ul>
           <li><a class="current" href="#home">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
@@ -30,29 +31,17 @@
     </div>
   </header>
 
-  <section class="slider home" id="home">
+  <section class="slider" id="home">
     <div class="wrapper">
-      <div class="slideshow-container">
-         <div class="offscreen1"style="display: none;"></div> 
-        <div class="offscreen2" style="display: none;"></div>
-        <div class="offscreen3" style="display: none;"></div>
-    
-        <img class="chev_left" src="assets/img/chev-left.png" alt="to the previous slide">
-        
-        <div class="slider__images">
-          <div class="iphone-button1"></div>
-          <div class="iphone-button2"></div>
-          <img class="iphone1" src="assets/img/iphone_vertical.png" alt="iPhone Vertical">
-          <img class="iphone2" src="assets/img/iphone_horizontal.png" alt="iPhone Horizontal">
-        </div>
-        <div class="slider__images bigger" style="display: none;">
-          <div class="iphone-button3"></div>
-          <img class="iphones" src="assets/img/slide2.png" alt="vertical image of the 3 iPhone's">
-        </div>
+      <h2 class="visually-hidden">Image Gallery</h2>
+      <button class="arrow left" type="button" aria-label="Slide previous"></button>
 
-        <img class="chev_right" src="assets/img/chev-right.png" alt="to the next slide">
+      <div class="slider__images">
+        <span class="visually-hidden">Slider</span>
+      </div>
+
+      <button class="arrow right" type="button" aria-label="Slide next"></button>
     </div>
-  </div>
   </section>
 
   <section class="services" id="services">
@@ -60,7 +49,7 @@
       <h2>Our Services</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 
-      <div class="layout-3-column">
+      <div class="services__services">
         <div class="service custom-design">
           <h3>Custom Design</h3>
           <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -101,87 +90,77 @@
 
       <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 
-      <nav class="navigation_bar">
-        <ul class="navbar_buttons portfolio_menu" id="menu-portfolio">
-            <li>
-                <p class="buttons b1 active">All</p>
-            </li>
-            <li>
-                <p class="buttons b2">Web Design</p>
-            </li>
-            <li>
-                <p class="buttons b3">Graphic Design</p>
-            </li>
-            <li>
-                <p class="buttons b4">Artwork</p>
-            </li>
-        </ul>
-    </nav>
+      <div class="portfolio__tags">
+        <button class="tag selected" type="button">All</button>
+        <button class="tag" type="button">Web Design</button>
+        <button class="tag" type="button">Graphic Design</button>
+        <button class="tag" type="button">Artwork</button>
+      </div>
 
-      <div class="layout-4-column portfolio_pics" id="portfolio-grid">
-        <img class="portfolio__picture" src="assets/img/portfolio/1.jpg" alt="Portfolio Picture 1 — Ship illustration">
-        <img class="portfolio__picture" src="assets/img//portfolio/2.jpg" alt="Portfolio Picture 2 — Smiling girl with ice-cream illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/3.jpg" alt="Portfolio Picture 3 — City at night illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/4.jpg" alt="Portfolio Picture 4 — Robot illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/5.jpg" alt="Portfolio Picture 5 — Strange animals illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/6.jpg" alt="Portfolio Picture 6 — Building with SDK title illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/7.jpg" alt="Portfolio Picture 7 — Robots and rocket illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/8.jpg" alt="Portfolio Picture 8 — Hens illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/9.jpg" alt="Portfolio Picture 9 — Monster with castle on top illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/10.jpg" alt="Portfolio Picture 10 — Calligraphy „Video killed Radio“">
-        <img class="portfolio__picture" src="assets/img/portfolio/11.jpg" alt="Portfolio Picture 11 — Creepy Monster illustration">
-        <img class="portfolio__picture" src="assets/img/portfolio/12.jpg" alt="Portfolio Picture 12 — Broken Glass illustration">
+      <div class="portfolio__pictures">
+        <img class="portfolio__picture" src="./assets/portfolio/1.jpg" alt="Portfolio Picture 1 — Ship illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/2.jpg" alt="Portfolio Picture 2 — Smiling girl with ice-cream illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/3.jpg" alt="Portfolio Picture 3 — City at night illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/4.jpg" alt="Portfolio Picture 4 — Robot illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/5.jpg" alt="Portfolio Picture 5 — Strange animals illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/6.jpg" alt="Portfolio Picture 6 — Building with SDK title illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/7.jpg" alt="Portfolio Picture 7 — Robots and rocket illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/8.jpg" alt="Portfolio Picture 8 — Hens illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/9.jpg" alt="Portfolio Picture 9 — Monster with castle on top illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/10.jpg" alt="Portfolio Picture 10 — Calligraphy „Video killed Radio“" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/11.jpg" alt="Portfolio Picture 11 — Creepy Monster illustration" width="220" height="187">
+        <img class="portfolio__picture" src="./assets/portfolio/12.jpg" alt="Portfolio Picture 12 — Broken Glass illustration" width="220" height="187">
       </div>
     </div>
   </section>
 
-  <section class="about-us about" id="about">
+  <section class="about" id="about">
     <div class="wrapper">
       <h2>About Us</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       
-      <div class="layout-3-column">
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/adam-jensen.jpg" alt="Adam Jensen photo">
+      <div class="about__employees">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="./assets/employees/adam-jensen.jpg" alt="Adam Jensen photo" width="300" height="300">
           <h3>Adam Jensen</h3>
           <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
-          <div class="social-icons">
-            <a class="icon icon_facebook" href="#"></a>
-            <a class="icon icon_google-plus" href="#"></a>
-            <a class="icon icon_twitter" href="#"></a>
-            <a class="icon icon_linkedin" href="#"></a>
-          </div>
+          <ul class="social">
+            <li><a class="social__link social__link--facebook" href="./#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="social__link social__link--google-plus" href="./#"><span class="visually-hidden">Google Plus</span></a></li>
+            <li><a class="social__link social__link--twitter" href="./#"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="social__link social__link--linkedin" href="./#"><span class="visually-hidden">LinkedIn</span></a></li>
+          </ul>
         </div>
 
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/desmond-miles.jpg" alt="Desmond Miles photo">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="./assets/employees/desmond-miles.jpg" alt="Desmond Miles photo" width="300" height="300">
           <h3>Desmond Miles</h3>
           <p>Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
-          <div class="social-icons">
-            <a class="icon icon_facebook" href="#"></a>
-            <a class="icon icon_google-plus" href="#"></a>
-            <a class="icon icon_twitter" href="#"></a>
-            <a class="icon icon_linkedin" href="#"></a>
-          </div>
+          <ul class="social">
+            <li><a class="social__link social__link--facebook" href="./#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="social__link social__link--google-plus" href="./#"><span class="visually-hidden">Google Plus</span></a></li>
+            <li><a class="social__link social__link--twitter" href="./#"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="social__link social__link--linkedin" href="./#"><span class="visually-hidden">LinkedIn</span></a></li>
+          </ul>
         </div>
 
-        <div class="about-us__employee">
-          <img class="about-us__employee-photo" src="assets/employees/scolara-visari.jpg" alt="Scolara Visari photo">
+        <div class="about__employee">
+          <img class="about__employee-photo" src="./assets/employees/scolara-visari.jpg" alt="Scolara Visari photo" width="300" height="300">
           <h3>Scolara Visari</h3>
           <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
-          <div class="social-icons">
-            <a class="icon icon_facebook" href="#"></a>
-            <a class="icon icon_google-plus" href="#"></a>
-            <a class="icon icon_twitter" href="#"></a>
-            <a class="icon icon_linkedin" href="#"></a>
-          </div>
+          <ul class="social">
+            <li><a class="social__link social__link--facebook" href="./#"><span class="visually-hidden">Facebook</span></a></li>
+            <li><a class="social__link social__link--google-plus" href="./#"><span class="visually-hidden">Google Plus</span></a></li>
+            <li><a class="social__link social__link--twitter" href="./#"><span class="visually-hidden">Twitter</span></a></li>
+            <li><a class="social__link social__link--linkedin" href="./#"><span class="visually-hidden">LinkedIn</span></a></li>
+          </ul>
         </div>
 
       </div>
     </div>
   </section>
 
-  <section class="contacts contact" id="contact">
+  <section class="contact" id="contact">
     <div class="wrapper">
       <h2>Get a Quote</h2>
       <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
@@ -191,31 +170,31 @@
           <input type="email" name="email" placeholder="Email (Required)" required>
           <input type="text" name="subject" placeholder="Subject">
           <textarea name="message" placeholder="Describe your project in detail..." cols="30" rows="13"></textarea>
-          <button type="submit" formmethod="POST">Submit</button>          
+          <button type="submit" formmethod="POST">SEND</button>
         </form>
         <div class="contact-form__info">
           <h3>Contact Information</h3>
-          <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
-          <p class="address">Elm St. 14/05 Lost City</p>
-          <a class="phone" href="tel:035283318635">03528 331 86 35</a>
-          <a class="email" href="mailto:info@singolo.com">info@singolo.com</a>
+          <p class="contact-form__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </p>
+          <p class="contact-form__address">Elm St. 14/05 Lost City</p>
+          <a class="contact-form__phone" href="./tel:035283318635">03528 331 86 35</a>
+          <a class="contact-form__email" href="./mailto:info@singolo.com">info@singolo.com</a>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
+  <footer class="footer">
     <div class="wrapper">
-      <div class="copyright">&copy; Copyright 2013 · by PSDchat.com</div>
-      <div class="social-icons">
-        <a class="icon icon_facebook" href="#"></a>
-        <a class="icon icon_google-plus" href="#"></a>
-        <a class="icon icon_twitter" href="#"></a>
-        <a class="icon icon_linkedin" href="#"></a>
-      </div>
+      <p class="footer__copyright">&copy; Copyright 2013</p>
+      <ul class="footer__social social">
+        <li><a class="social__link social__link--facebook" href="./#"><span class="visually-hidden">Facebook</span></a></li>
+        <li><a class="social__link social__link--google-plus" href="./#"><span class="visually-hidden">Google Plus</span></a></li>
+        <li><a class="social__link social__link--twitter" href="./#"><span class="visually-hidden">Twitter</span></a></li>
+        <li><a class="social__link social__link--linkedin" href="./#"><span class="visually-hidden">LinkedIn</span></a></li>
+      </ul>
     </div>
   </footer>
-<!-- message - hiden(default) -->
-  <script src="script.js"></script>
+
+  <script src="./script.js"></script>
 </body>
 </html>
